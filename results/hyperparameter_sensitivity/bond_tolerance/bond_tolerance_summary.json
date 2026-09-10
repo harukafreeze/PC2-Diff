@@ -1,0 +1,92 @@
+[
+  {
+    "tolerance": 0.2,
+    "use_mst": false,
+    "mode": "Standard Greedy (Baseline)",
+    "mean_lcc_ratio": 48.07936507936508,
+    "strict_connectivity_rate": 0.0,
+    "avg_fragments": 6.81,
+    "validity_rate": 97.0
+  },
+  {
+    "tolerance": 0.2,
+    "use_mst": true,
+    "mode": "Component Supergraph MST (BUILD 3.0)",
+    "mean_lcc_ratio": 100.0,
+    "strict_connectivity_rate": 100.0,
+    "avg_fragments": 1.0,
+    "validity_rate": 100.0
+  },
+  {
+    "tolerance": 0.3,
+    "use_mst": false,
+    "mode": "Standard Greedy (Baseline)",
+    "mean_lcc_ratio": 51.063492063492056,
+    "strict_connectivity_rate": 1.0,
+    "avg_fragments": 6.29,
+    "validity_rate": 94.0
+  },
+  {
+    "tolerance": 0.3,
+    "use_mst": true,
+    "mode": "Component Supergraph MST (BUILD 3.0)",
+    "mean_lcc_ratio": 100.0,
+    "strict_connectivity_rate": 100.0,
+    "avg_fragments": 1.0,
+    "validity_rate": 100.0
+  },
+  {
+    "tolerance": 0.35,
+    "use_mst": false,
+    "mode": "Standard Greedy (Baseline)",
+    "mean_lcc_ratio": 53.03174603174603,
+    "strict_connectivity_rate": 1.0,
+    "avg_fragments": 6.05,
+    "validity_rate": 91.0
+  },
+  {
+    "tolerance": 0.35,
+    "use_mst": true,
+    "mode": "Component Supergraph MST (BUILD 3.0)",
+    "mean_lcc_ratio": 100.0,
+    "strict_connectivity_rate": 100.0,
+    "avg_fragments": 1.0,
+    "validity_rate": 100.0
+  },
+  {
+    "tolerance": 0.4,
+    "use_mst": false,
+    "mode": "Standard Greedy (Baseline)",
+    "mean_lcc_ratio": 53.80952380952381,
+    "strict_connectivity_rate": 1.0,
+    "avg_fragments": 5.83,
+    "validity_rate": 90.0
+  },
+  {
+    "tolerance": 0.4,
+    "use_mst": true,
+    "mode": "Component Supergraph MST (BUILD 3.0)",
+    "mean_lcc_ratio": 100.0,
+    "strict_connectivity_rate": 100.0,
+    "avg_fragments": 1.0,
+    "validity_rate": 100.0
+  },
+  {
+    "tolerance": 0.5,
+    "use_mst": false,
+    "mode": "Standard Greedy (Baseline)",
+    "mean_lcc_ratio": 56.595238095238095,
+    "strict_connectivity_rate": 3.0,
+    "avg_fragments": 5.4,
+    "validity_rate": 86.0
+  },
+  {
+    "tolerance": 0.5,
+    "use_mst": true,
+    "mode": "Component Supergraph MST (BUILD 3.0)",
+    "mean_lcc_ratio": 100.0,
+    "strict_connectivity_rate": 100.0,
+    "avg_fragments": 1.0,
+    "validity_rate": 100.0
+  }
+]

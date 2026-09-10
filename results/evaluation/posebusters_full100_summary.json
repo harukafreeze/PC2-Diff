@@ -1,0 +1,11 @@
+{
+  "total_expected": 1000,
+  "total_tested": 998,
+  "pb_valid_rate": 68.7374749498998,
+  "bond_lengths_pass": 93.9879759519038,
+  "bond_angles_pass": 86.17234468937876,
+  "aromatic_flat_pass": 99.59919839679358,
+  "no_clash_pass": 100.0,
+  "dist_protein_pass": 98.49699398797596,
+  "time_elapsed_min": 138.8311538298925
+}

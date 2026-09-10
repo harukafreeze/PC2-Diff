@@ -1,0 +1,20 @@
+
+% =========================================================================
+% Table S4: Sensitivity Analysis on Triangulation Suppression Cutoff (Table S4)
+% =========================================================================
+\begin{table}[t]
+\centering
+\small
+\caption{Sensitivity analysis of the triangulation suppression distance threshold ($d_{\text{tri}}$) on ring size distributions, aromatic ring counts, conformational strain energy, and drug-likeness evaluated on CrossDocked2020 ($N=100$ point clouds).}
+\label{tab:sensitivity_triangulation}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Suppression Threshold ($d_{\text{tri}}$)} & \textbf{Validity (\%)} $\uparrow$ & \textbf{3-Ring Ratio (\%)} $\downarrow$ & \textbf{Arom Rings} $\uparrow$ & \textbf{Mean QED} $\uparrow$ & \textbf{Strain (kcal/mol)} $\downarrow$ \\
+\midrule
+No Suppression (None) & 90.0 & 44.5 & 0.88 & 0.6803 & 397.3 \\
+Loose (1.60 Å) & 93.0 & 38.1 & 0.88 & 0.6667 & 402.2 \\
+\textbf{Standard (1.50 Å) [Ours]} & \textbf{93.0} & \textbf{33.7} & \textbf{0.88} & \textbf{0.6598} & \textbf{395.6} \\
+Strict (1.40 Å) & 94.0 & 27.1 & 0.86 & 0.6573 & 432.6 \\
+\bottomrule
+\end{tabular}
+\end{table}

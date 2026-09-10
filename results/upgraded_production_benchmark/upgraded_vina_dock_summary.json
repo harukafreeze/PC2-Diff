@@ -1,0 +1,15 @@
+{
+  "total_expected": 30,
+  "valid_molecules": 30,
+  "validity_rate": 100.0,
+  "connectivity_rate": 100.0,
+  "uniqueness_rate": 100.0,
+  "mean_qed": 0.6515838636231208,
+  "mean_sa": 0.6000861843737529,
+  "mean_arom": 0.8,
+  "mean_vina_min": -4.590249999999999,
+  "mean_vina_dock": -6.781999999999999,
+  "mean_clashes": 3.1333333333333333,
+  "mean_strain": 422.87221649273056,
+  "total_elapsed_sec": 341.46130776405334
+}

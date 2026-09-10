@@ -1,0 +1,25 @@
+{
+  "total_evaluated_mols": 18,
+  "posebusters_passed_all": 0,
+  "pb_valid_rate": 0.0,
+  "mean_qed": 0.6136746087071753,
+  "subtest_breakdown_pct": {
+    "mol_pred_loaded": 100.0,
+    "mol_cond_loaded": 100.0,
+    "sanitization": 100.0,
+    "inchi_convertible": 100.0,
+    "all_atoms_connected": 100.0,
+    "no_radicals": 100.0,
+    "internal_steric_clash": 61.11,
+    "non-aromatic_ring_non-flatness": 100.0,
+    "double_bond_flatness": 100.0,
+    "protein-ligand_maximum_distance": 100.0,
+    "minimum_distance_to_organic_cofactors": 100.0,
+    "minimum_distance_to_inorganic_cofactors": 100.0,
+    "minimum_distance_to_waters": 100.0,
+    "volume_overlap_with_organic_cofactors": 100.0,
+    "volume_overlap_with_inorganic_cofactors": 100.0,
+    "volume_overlap_with_waters": 100.0
+  },
+  "total_elapsed_sec": 41.8417809009552
+}

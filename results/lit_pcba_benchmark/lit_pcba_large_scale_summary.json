@@ -1,0 +1,137 @@
+[
+  {
+    "target": "ADRB2",
+    "pdb_id": "4LDO",
+    "name": "Beta-2 adrenergic receptor (ADRB2)",
+    "top_vina_dock": -9.774000000000001,
+    "top_qed": 0.6456844132219035,
+    "top_le": -0.40725,
+    "top_hbonds": 0.1
+  },
+  {
+    "target": "ALDH1",
+    "pdb_id": "5L2M",
+    "name": "Aldehyde dehydrogenase 1 (ALDH1)",
+    "top_vina_dock": -12.806000000000001,
+    "top_qed": 0.74596557661329,
+    "top_le": -0.5335833333333333,
+    "top_hbonds": 0.2
+  },
+  {
+    "target": "ESR_ago",
+    "pdb_id": "2P15",
+    "name": "Estrogen receptor alpha agonist (ESR_ago)",
+    "top_vina_dock": -12.21,
+    "top_qed": 0.7498146167630478,
+    "top_le": -0.50875,
+    "top_hbonds": 0.2
+  },
+  {
+    "target": "ESR_antago",
+    "pdb_id": "2IOK",
+    "name": "Estrogen receptor alpha antagonist (ESR_antago)",
+    "top_vina_dock": -13.1,
+    "top_qed": 0.6131295652405737,
+    "top_le": -0.5038461538461538,
+    "top_hbonds": 0.3
+  },
+  {
+    "target": "FEN1",
+    "pdb_id": "5FV7",
+    "name": "Flap endonuclease 1 (FEN1)",
+    "top_vina_dock": -8.227,
+    "top_qed": 0.6846242867179227,
+    "top_le": -0.41135,
+    "top_hbonds": 3.6
+  },
+  {
+    "target": "GBA",
+    "pdb_id": "2V3D",
+    "name": "Acid beta-glucocerebrosidase (GBA)",
+    "top_vina_dock": -11.221,
+    "top_qed": 0.6412388143718306,
+    "top_le": -0.4675416666666667,
+    "top_hbonds": 1.8
+  },
+  {
+    "target": "IDH1",
+    "pdb_id": "4UMX",
+    "name": "Isocitrate dehydrogenase 1 (IDH1)",
+    "top_vina_dock": -9.595999999999998,
+    "top_qed": 0.5984775655294337,
+    "top_le": -0.3690769230769231,
+    "top_hbonds": 2.0
+  },
+  {
+    "target": "KAT2A",
+    "pdb_id": "5H86",
+    "name": "Histone acetyltransferase KAT2A",
+    "top_vina_dock": -10.963,
+    "top_qed": 0.6805330521295847,
+    "top_le": -0.4567916666666666,
+    "top_hbonds": 0.7
+  },
+  {
+    "target": "MAPK1",
+    "pdb_id": "4ZZN",
+    "name": "Mitogen-activated protein kinase 1 (MAPK1)",
+    "top_vina_dock": -10.548,
+    "top_qed": 0.6940532874310377,
+    "top_le": -0.43949999999999995,
+    "top_hbonds": 0.3
+  },
+  {
+    "target": "MTORC1",
+    "pdb_id": "4DRI",
+    "name": "FKBP51 PPIase domain / mTOR pathway",
+    "top_vina_dock": -13.453999999999999,
+    "top_qed": 0.6398880611898499,
+    "top_le": -0.48050000000000004,
+    "top_hbonds": 0.2
+  },
+  {
+    "target": "OPRK1",
+    "pdb_id": "6B73",
+    "name": "Kappa opioid receptor (OPRK1)",
+    "top_vina_dock": -11.842,
+    "top_qed": 0.6835599589116146,
+    "top_le": -0.4934166666666667,
+    "top_hbonds": 1.1
+  },
+  {
+    "target": "PKM2",
+    "pdb_id": "4JPG",
+    "name": "Pyruvate kinase muscle isoform (PKM2)",
+    "top_vina_dock": -14.362,
+    "top_qed": 0.5927844897992542,
+    "top_le": -0.5523846153846155,
+    "top_hbonds": 0.4
+  },
+  {
+    "target": "PPARG",
+    "pdb_id": "5Y2T",
+    "name": "Peroxisome proliferator-activated receptor gamma",
+    "top_vina_dock": -10.072,
+    "top_qed": 0.6178714884084959,
+    "top_le": -0.3873846153846153,
+    "top_hbonds": 1.6
+  },
+  {
+    "target": "TP53",
+    "pdb_id": "3ZME",
+    "name": "Cellular tumor antigen p53 (TP53)",
+    "top_vina_dock": -10.196,
+    "top_qed": 0.764756651929247,
+    "top_le": -0.5098,
+    "top_hbonds": 0.5
+  },
+  {
+    "target": "VDR",
+    "pdb_id": "3A2I",
+    "name": "Vitamin D receptor (VDR)",
+    "top_vina_dock": -13.87,
+    "top_qed": 0.6781259808046605,
+    "top_le": -0.5334615384615384,
+    "top_hbonds": 0.5
+  }
+]

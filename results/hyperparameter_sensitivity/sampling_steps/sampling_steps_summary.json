@@ -1,0 +1,57 @@
+[
+  {
+    "steps": 25,
+    "total_tested": 100,
+    "validity_rate": 99.0,
+    "connectivity_rate": 100.0,
+    "mean_qed": 0.6433119264457162,
+    "mean_vina_dock": 60668.14031313133,
+    "mean_clashes": 5.02,
+    "mean_strain": 534.3188440867996,
+    "latency_per_mol_sec": 0.07295800447463989
+  },
+  {
+    "steps": 50,
+    "total_tested": 100,
+    "validity_rate": 100.0,
+    "connectivity_rate": 100.0,
+    "mean_qed": 0.6441364557066254,
+    "mean_vina_dock": -7.013199999999999,
+    "mean_clashes": 4.53,
+    "mean_strain": 394.2349155429571,
+    "latency_per_mol_sec": 0.14214513301849366
+  },
+  {
+    "steps": 100,
+    "total_tested": 100,
+    "validity_rate": 99.0,
+    "connectivity_rate": 100.0,
+    "mean_qed": 0.639493946182447,
+    "mean_vina_dock": -6.607212121212122,
+    "mean_clashes": 5.0,
+    "mean_strain": 440.655275310207,
+    "latency_per_mol_sec": 0.2812454581260681
+  },
+  {
+    "steps": 250,
+    "total_tested": 100,
+    "validity_rate": 99.0,
+    "connectivity_rate": 100.0,
+    "mean_qed": 0.6402774723372704,
+    "mean_vina_dock": -6.682767676767676,
+    "mean_clashes": 5.08,
+    "mean_strain": 345.7965719290908,
+    "latency_per_mol_sec": 0.7018704390525818
+  },
+  {
+    "steps": 500,
+    "total_tested": 100,
+    "validity_rate": 100.0,
+    "connectivity_rate": 100.0,
+    "mean_qed": 0.6303978286103823,
+    "mean_vina_dock": -7.217759999999999,
+    "mean_clashes": 5.38,
+    "mean_strain": 436.75109338239446,
+    "latency_per_mol_sec": 1.4290916013717652
+  }
+]

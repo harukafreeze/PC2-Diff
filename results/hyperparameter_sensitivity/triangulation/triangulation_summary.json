@@ -1,0 +1,46 @@
+[
+  {
+    "name": "No Suppression (None)",
+    "cutoff": null,
+    "validity_rate": 90.0,
+    "three_ring_ratio": 44.516129032258064,
+    "total_3_rings": 207,
+    "total_rings": 465,
+    "mean_arom_rings": 0.8777777777777778,
+    "mean_qed": 0.6803081569221954,
+    "mean_strain": 397.2851336631073
+  },
+  {
+    "name": "Loose (1.60 \u00c5)",
+    "cutoff": 1.6,
+    "validity_rate": 93.0,
+    "three_ring_ratio": 38.13333333333333,
+    "total_3_rings": 143,
+    "total_rings": 375,
+    "mean_arom_rings": 0.8817204301075269,
+    "mean_qed": 0.6667228056565082,
+    "mean_strain": 402.2136948432124
+  },
+  {
+    "name": "Standard (1.50 \u00c5) [Ours]",
+    "cutoff": 1.5,
+    "validity_rate": 93.0,
+    "three_ring_ratio": 33.724340175953074,
+    "total_3_rings": 115,
+    "total_rings": 341,
+    "mean_arom_rings": 0.8817204301075269,
+    "mean_qed": 0.6598284609803521,
+    "mean_strain": 395.57903793135756
+  },
+  {
+    "name": "Strict (1.40 \u00c5)",
+    "cutoff": 1.4,
+    "validity_rate": 94.0,
+    "three_ring_ratio": 27.129337539432175,
+    "total_3_rings": 86,
+    "total_rings": 317,
+    "mean_arom_rings": 0.8617021276595744,
+    "mean_qed": 0.6572756137712061,
+    "mean_strain": 432.6278290201144
+  }
+]

@@ -1,0 +1,19 @@
+
+% =========================================================================
+% Table 4: Large-Scale Generalization across Diverse Pharmacophore Templates (N=100)
+% =========================================================================
+\begin{table}[t]
+\centering
+\small
+\caption{Empirical evaluation of Project BUILD 3.0 across diverse pharmacophore templates on CrossDocked2020 (100 candidate molecules per template across 10 independent pockets).}
+\label{tab:scaffold_generalization_large_scale}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Template Scaffold} & \textbf{Ring Type} & \textbf{Validity (\%)} $\uparrow$ & \textbf{Connectivity (\%)} $\uparrow$ & \textbf{Mean QED} $\uparrow$ & \textbf{Arom Rings} $\uparrow$ & \textbf{Vina Dock} $\downarrow$ \\
+\midrule
+Benzene & 6-membered & 94.0 & 100.0 & 0.6533 & 0.85 & -11.34 \\
+Pyridine & 6-membered & 90.0 & 100.0 & 0.6262 & 0.90 & -10.45 \\
+Thiophene & 5-membered & 95.0 & 100.0 & 0.5854 & 0.97 & -9.60 \\
+\bottomrule
+\end{tabular}
+\end{table}

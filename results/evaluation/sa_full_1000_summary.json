@@ -1,0 +1,11 @@
+{
+  "total_sampled": 1000,
+  "valid_molecules": 998,
+  "validity_rate": 99.8,
+  "connectivity_rate": 100.0,
+  "mean_normalized_sa": 0.6044681142464423,
+  "median_normalized_sa": 0.6121138156253982,
+  "mean_raw_sa": 4.559786971782019,
+  "median_raw_sa": 4.490975659371417,
+  "time_elapsed_sec": 188.7752935886383
+}

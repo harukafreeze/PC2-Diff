@@ -1,0 +1,38 @@
+[
+  {
+    "template": "Benzene",
+    "num_atoms": 6,
+    "total_sampled": 100,
+    "validity": 94.0,
+    "connectivity": 100.0,
+    "mean_qed": 0.6533304951659376,
+    "mean_arom": 0.851063829787234,
+    "mean_vina": -11.344583250635598,
+    "mean_clashes": 4.61,
+    "time_sec": 32.04829812049866
+  },
+  {
+    "template": "Pyridine",
+    "num_atoms": 6,
+    "total_sampled": 100,
+    "validity": 90.0,
+    "connectivity": 100.0,
+    "mean_qed": 0.6261691414182583,
+    "mean_arom": 0.9,
+    "mean_vina": -10.448179007233744,
+    "mean_clashes": 4.89,
+    "time_sec": 32.36934518814087
+  },
+  {
+    "template": "Thiophene",
+    "num_atoms": 5,
+    "total_sampled": 100,
+    "validity": 95.0,
+    "connectivity": 100.0,
+    "mean_qed": 0.5853907455561649,
+    "mean_arom": 0.968421052631579,
+    "mean_vina": -9.60446660216417,
+    "mean_clashes": 6.98,
+    "time_sec": 33.57132339477539
+  }
+]

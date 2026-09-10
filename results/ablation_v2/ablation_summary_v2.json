@@ -1,0 +1,57 @@
+[
+  {
+    "name": "1. Base Diffusion",
+    "validity": 100.0,
+    "connectivity": 0.0,
+    "mean_qed": 0.5596053515998528,
+    "mean_arom": 0.0,
+    "mean_vina": -6.5,
+    "mean_clashes": 3.38,
+    "mean_strain": 3.0457937441649188,
+    "time_sec": 19.574787616729736
+  },
+  {
+    "name": "2. + Component MST",
+    "validity": 94.0,
+    "connectivity": 100.0,
+    "mean_qed": 0.2682870265567148,
+    "mean_arom": 0.0,
+    "mean_vina": -8.377958333333334,
+    "mean_clashes": 3.4,
+    "mean_strain": 828.0564322891917,
+    "time_sec": 955.2217290401459
+  },
+  {
+    "name": "3. + Scaffold Seeding (Fixed XY)",
+    "validity": 83.0,
+    "connectivity": 100.0,
+    "mean_qed": 0.6505885707648149,
+    "mean_arom": 0.0,
+    "mean_vina": -7.360246913580248,
+    "mean_clashes": 4.63,
+    "mean_strain": 451.4806123388134,
+    "time_sec": 306.17675709724426
+  },
+  {
+    "name": "4. + SVD Alignment & Kekule",
+    "validity": 90.0,
+    "connectivity": 100.0,
+    "mean_qed": 0.6628417605797019,
+    "mean_arom": 0.8222222222222222,
+    "mean_vina": -7.829921348314606,
+    "mean_clashes": 4.82,
+    "mean_strain": 381.800999841973,
+    "time_sec": 340.0145239830017
+  },
+  {
+    "name": "5. Full BUILD 3.0",
+    "validity": 100.0,
+    "connectivity": 100.0,
+    "mean_qed": 0.6404581759987014,
+    "mean_arom": 0.83,
+    "mean_vina": -7.350169999999999,
+    "mean_clashes": 5.0,
+    "mean_strain": 430.6147098102938,
+    "time_sec": 416.0631012916565
+  }
+]

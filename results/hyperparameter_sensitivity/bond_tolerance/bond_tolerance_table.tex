@@ -1,0 +1,23 @@
+
+% =========================================================================
+% Table S3: Multi-dimensional Topological Robustness Analysis (Table S3)
+% =========================================================================
+\begin{table*}[t]
+\centering
+\small
+\caption{Multi-dimensional topological robustness and validity comparison between Standard Greedy Bond Perception (Literature Baseline) and Component Supergraph MST (BUILD 3.0) across varying covalent bond tolerances ($\Delta d$) evaluated on the same 100 generated point clouds ($N=100$). \textbf{LCC (\%)} denotes the percentage of heavy atoms retained in the largest connected component; \textbf{Strict Conn (\%)} requires zero unbonded stray atoms ($|\mathcal{C}|=1$).}
+\label{tab:sensitivity_bond_tolerance}
+\begin{tabular}{lcccccccc}
+\toprule
+\textbf{Tolerance ($\Delta d$)} & \multicolumn{4}{c}{\textbf{Standard Greedy (Literature Baseline)}} & \multicolumn{4}{c}{\textbf{Component Supergraph MST (BUILD 3.0)}} \\
+\cmidrule(lr){2-5} \cmidrule(lr){6-9}
+& \textbf{LCC (\%)} $\uparrow$ & \textbf{Strict (\%)} $\uparrow$ & \textbf{Frags} $\downarrow$ & \textbf{Valid (\%)} $\uparrow$ & \textbf{LCC (\%)} $\uparrow$ & \textbf{Strict (\%)} $\uparrow$ & \textbf{Frags} $\downarrow$ & \textbf{Valid (\%)} $\uparrow$ \\
+\midrule
+0.20 \text{\AA}           &  48.1 &   0.0 & 6.81 &  97.0 & \textbf{100.0} & \textbf{100.0} & \textbf{1.00} & \textbf{100.0} \\
+0.30 \text{\AA}           &  51.1 &   1.0 & 6.29 &  94.0 & \textbf{100.0} & \textbf{100.0} & \textbf{1.00} & \textbf{100.0} \\
+\textbf{0.35 \text{\AA} (Default)} &  53.0 &   1.0 & 6.05 &  91.0 & \textbf{100.0} & \textbf{100.0} & \textbf{1.00} & \textbf{100.0} \\
+0.40 \text{\AA}           &  53.8 &   1.0 & 5.83 &  90.0 & \textbf{100.0} & \textbf{100.0} & \textbf{1.00} & \textbf{100.0} \\
+0.50 \text{\AA}           &  56.6 &   3.0 & 5.40 &  86.0 & \textbf{100.0} & \textbf{100.0} & \textbf{1.00} & \textbf{100.0} \\
+\bottomrule
+\end{tabular}
+\end{table*}

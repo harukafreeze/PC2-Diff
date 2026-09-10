@@ -1,0 +1,20 @@
+
+% =========================================================================
+% Table S2: Sensitivity Analysis on Physical Loss Schedulers (Table S2)
+% =========================================================================
+\begin{table}[t]
+\centering
+\small
+\caption{Comparison of different physical potential annealing schedulers on molecular validity, structural plausibility, and strain energy evaluated on CrossDocked2020 ($N=100$ molecules per setting across 20 independent pockets).}
+\label{tab:sensitivity_schedulers}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Scheduler Type} & \textbf{Validity (\%)} $\uparrow$ & \textbf{Connectivity (\%)} $\uparrow$ & \textbf{Mean QED} $\uparrow$ & \textbf{Vina Dock} $\downarrow$ & \textbf{Clashes} $\downarrow$ & \textbf{Strain (kcal/mol)} $\downarrow$ \\
+\midrule
+Constant Weight (λ=0.5) & 100.0 & 100.0 & 0.6386 & -7.47 & 4.73 & 419.6 \\
+Step Threshold (SNR≥1.0) & 100.0 & 100.0 & 0.6716 & -7.15 & 5.10 & 561.2 \\
+Cosine Scheduler & 99.0 & 100.0 & 0.6567 & -7.41 & 4.75 & 407.8 \\
+\textbf{Min-SNR Sigmoid (Ours)} & \textbf{100.0} & \textbf{100.0} & \textbf{0.6334} & \textbf{-7.14} & \textbf{4.94} & \textbf{453.6} \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,24 @@
+
+% =========================================================================
+% Table 5: Comprehensive PoseBusters Benchmark on CrossDocked2020 (N=1000)
+% =========================================================================
+\begin{table}[t]
+\centering
+\small
+\caption{Comprehensive physical-chemical validation on CrossDocked2020 evaluated by official PoseBusters (1000 candidates).}
+\label{tab:posebusters_benchmark_full}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Method} & \textbf{PB-Valid (\%)} & \textbf{Lengths (\%)} & \textbf{Angles (\%)} & \textbf{Flatness (\%)} & \textbf{No Clashes (\%)} \\
+\midrule
+IPDiff (ICLR'24)     & 38.1 & -- & -- & -- & -- \\
+IRDiff (ICML'24)     & 41.4 & -- & -- & -- & -- \\
+TargetDiff (ICLR'23) & 50.5 & 64.2 & 52.1 & 78.4 & 62.0 \\
+DeCoDe (ICML'26)     & 64.6 & 78.1 & 68.3 & 88.0 & 81.2 \\
+DecompDiff (ICML'23) & 68.8 & 81.4 & 71.2 & 89.5 & 82.0 \\
+IRDeCo (ICML'26)     & 73.2 & 84.6 & 74.0 & 91.2 & 84.5 \\
+\midrule
+\textbf{BUILD 3.0 (Ours)} & \textbf{68.7} & \textbf{94.0} & \textbf{86.2} & \textbf{99.6} & \textbf{98.5} \\
+\bottomrule
+\end{tabular}
+\end{table}

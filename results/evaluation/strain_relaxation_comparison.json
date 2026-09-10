@@ -1,0 +1,10 @@
+{
+  "raw_mean_strain": 832.0517990886188,
+  "relaxed_mean_strain": 805.4773579648229,
+  "raw_median_strain": 1000.0,
+  "relaxed_median_strain": 961.9945092138137,
+  "raw_vina": -11.169503192346799,
+  "relaxed_vina": -10.770058650651054,
+  "mean_qed": 0.6578184074337706,
+  "validity_rate": 100.0
+}

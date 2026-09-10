@@ -1,0 +1,49 @@
+experiment_name: "Project_BUILD_SBDD_Production_Precision"
+seed: 42
+
+dataset:
+  lmdb_dir: "data/crossdocked/crossdocked_lmdb"
+  split_type: "name"
+  batch_size: 128
+  num_workers: 4
+  pocket_radius: 10.0
+  max_pocket_atoms: 256
+
+model:
+  type: "TargetSBDDBackbone"
+  num_lig_types: 9
+  num_pocket_types: 6
+  max_lig_atoms: 100
+  hidden_dim: 128
+  num_layers: 6
+  num_heads: 4
+  physics_bias_cfg:
+    type: "LennardJonesCoulombBias"
+    sigma_default: 1.7
+    epsilon_default: 0.15
+    min_clamp: -50.0
+
+physics:
+  valency_potential:
+    type: "ContinuousValencyPotential"
+    scale: 0.5
+    bond_sigma: 0.40
+  scheduler:
+    type: "SNRSigmoidScheduler"
+    lambda_max: 1.0
+    k: 2.0
+    tau: 0.0
+
+diffusion:
+  schedule_type: "cosine"
+
+training:
+  epochs: 100
+  warmup_epochs: 3
+  lr: 3.0e-4           # 降至 3D 等变几何网络黄金学习率 3e-4，防止坐标跳跃震荡
+  min_lr: 1.0e-6
+  weight_decay: 1.0e-6
+  clip_grad_norm: 1.0  # 更加严格的梯度裁剪，稳定几何更新
+  val_interval: 5
+  sample_eval_count: 50
+  checkpoint_dir: "checkpoints/sbdd"

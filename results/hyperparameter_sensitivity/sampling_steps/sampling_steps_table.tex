@@ -1,0 +1,21 @@
+
+% =========================================================================
+% Table S1: Sensitivity Analysis on Reverse Diffusion Sampling Steps (T)
+% =========================================================================
+\begin{table}[t]
+\centering
+\small
+\caption{Sensitivity analysis of the number of reverse sampling steps ($T$) on generation quality, biophysical plausibility, and runtime efficiency evaluated on CrossDocked2020 ($N=100$ molecules per setting across 20 independent pockets).}
+\label{tab:sensitivity_sampling_steps}
+\begin{tabular}{ccccccc}
+\toprule
+\textbf{Steps ($T$)} & \textbf{Validity (\%)} $\uparrow$ & \textbf{Connectivity (\%)} $\uparrow$ & \textbf{Mean QED} $\uparrow$ & \textbf{Vina Dock} $\downarrow$ & \textbf{Clashes} $\downarrow$ & \textbf{Latency (s/mol)} $\downarrow$ \\
+\midrule
+25 & 99.0 & 100.0 & 0.6433 & 60668.14 & 5.02 & 0.073 \\
+50 & 100.0 & 100.0 & 0.6441 & -7.01 & 4.53 & 0.142 \\
+\textbf{100 (Default)} & \textbf{99.0} & \textbf{100.0} & \textbf{0.6395} & \textbf{-6.61} & \textbf{5.00} & 0.281 \\
+250 & 99.0 & 100.0 & 0.6403 & -6.68 & 5.08 & 0.702 \\
+500 & 100.0 & 100.0 & 0.6304 & -7.22 & 5.38 & 1.429 \\
+\bottomrule
+\end{tabular}
+\end{table}

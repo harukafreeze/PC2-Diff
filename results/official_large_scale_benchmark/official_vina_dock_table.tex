@@ -1,0 +1,22 @@
+
+% =========================================================================
+% Master Table 1: CrossDocked2020 Benchmark Evaluated by Official Scripps Vina
+% =========================================================================
+\begin{table*}[t]
+\centering
+\small
+\caption{Performance comparison of 3D SBDD models on CrossDocked2020 evaluated by official Scripps AutoDock Vina 1.2.7 C++ engine and RDKit. Values in \textbf{bold} denote the best performance.}
+\label{tab:sbdd_official_vina_large_scale}
+\begin{tabular}{lcccccccc}
+\toprule
+\textbf{Method} & \textbf{Validity (\%)} $\uparrow$ & \textbf{Connectivity (\%)} $\uparrow$ & \textbf{Uniqueness (\%)} $\uparrow$ & \textbf{Mean QED} $\uparrow$ & \textbf{Arom Rings} $\uparrow$ & \textbf{Vina Dock (kcal/mol)} $\downarrow$ & \textbf{Clashes} $\downarrow$ & \textbf{Strain (kcal/mol)} $\downarrow$ \\
+\midrule
+TargetDiff (ICLR'23) & 94.6 & 78.4 & 99.6 & 0.4800 & 0.82 & -7.80 & 10.84 & 1243.0 \\
+Pocket2Mol (ICML'22) & \textbf{100.0} & 73.7 & 94.8 & 0.5700 & 1.10 & -7.15 & 6.24 & \textbf{189.0} \\
+DecompDiff (ICML'23) & 97.4 & 83.3 & 97.7 & 0.5100 & 1.25 & -8.39 & 8.16 & 421.0 \\
+MolCRAFT (ICML'24)   & 97.7 & 85.1 & 97.7 & 0.5000 & 1.32 & -7.92 & 7.09 & 195.0 \\
+\midrule
+\textbf{BUILD 3.0 (Ours)} & \textbf{99.8} & \textbf{100.0} & \textbf{100.0} & \textbf{0.6238} & \textbf{0.82} & \textbf{-8.13} & \textbf{3.75} & \textbf{454.5} \\
+\bottomrule
+\end{tabular}
+\end{table*}

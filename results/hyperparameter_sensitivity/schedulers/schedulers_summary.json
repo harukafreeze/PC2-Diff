@@ -1,0 +1,46 @@
+[
+  {
+    "scheduler": "Constant Weight (\u03bb=0.5)",
+    "total_tested": 100,
+    "validity_rate": 100.0,
+    "connectivity_rate": 100.0,
+    "mean_qed": 0.6385718568609536,
+    "mean_vina_dock": -7.472979166666668,
+    "mean_clashes": 4.73,
+    "mean_strain": 419.60076582946596,
+    "time_sec": 1352.9812941551208
+  },
+  {
+    "scheduler": "Step Threshold (SNR\u22651.0)",
+    "total_tested": 100,
+    "validity_rate": 100.0,
+    "connectivity_rate": 100.0,
+    "mean_qed": 0.6716119244002112,
+    "mean_vina_dock": -7.1487575757575765,
+    "mean_clashes": 5.1,
+    "mean_strain": 561.1701252718335,
+    "time_sec": 1375.139484167099
+  },
+  {
+    "scheduler": "Cosine Scheduler",
+    "total_tested": 100,
+    "validity_rate": 99.0,
+    "connectivity_rate": 100.0,
+    "mean_qed": 0.6567330574827592,
+    "mean_vina_dock": -7.405020408163265,
+    "mean_clashes": 4.75,
+    "mean_strain": 407.8488621828008,
+    "time_sec": 1344.9751255512238
+  },
+  {
+    "scheduler": "Min-SNR Sigmoid (Ours)",
+    "total_tested": 100,
+    "validity_rate": 100.0,
+    "connectivity_rate": 100.0,
+    "mean_qed": 0.6333771204413455,
+    "mean_vina_dock": -7.13884,
+    "mean_clashes": 4.94,
+    "mean_strain": 453.60543796490487,
+    "time_sec": 1333.6513345241547
+  }
+]

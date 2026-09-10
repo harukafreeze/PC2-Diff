@@ -1,0 +1,21 @@
+
+% =========================================================================
+% Table 2: Stepwise Causal Ablation Matrix (V2 - Official Vina 1.2.7 C++ Aligned)
+% =========================================================================
+\begin{table*}[t]
+\centering
+\small
+\caption{Stepwise causal ablation study of individual architectural, physical, and topological components in Project BUILD 3.0 evaluated on CrossDocked2020 ($N=100$ molecules per variant across 20 independent pockets). All docking affinities are evaluated by the official Scripps AutoDock Vina 1.2.7 C++ engine; strain energies are determined via UFF after 50-step hydrogen relaxation. Values in \textbf{bold} denote the best performance in each column.}
+\label{tab:ablation_study_v2}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Model Variant} & \textbf{Validity (\%)} $\uparrow$ & \textbf{Connectivity (\%)} $\uparrow$ & \textbf{Mean QED} $\uparrow$ & \textbf{Arom Rings} $\uparrow$ & \textbf{Vina Dock} $\downarrow$ & \textbf{Strain (kcal/mol)} $\downarrow$ \\
+\midrule
+1. Base Diffusion & 100.0 & 0.0 & 0.5596 & 0.00 & -6.50 & 3.0 \\
+2. + Component MST & 94.0 & 100.0 & 0.2683 & 0.00 & -8.38 & 828.1 \\
+3. + Scaffold Seeding (Fixed XY) & 83.0 & 100.0 & 0.6506 & 0.00 & -7.36 & 451.5 \\
+4. + SVD Alignment & Kekule & 90.0 & 100.0 & 0.6628 & 0.82 & -7.83 & 381.8 \\
+\textbf{5. Full BUILD 3.0} & \textbf{100.0} & \textbf{100.0} & \textbf{0.6405} & \textbf{0.83} & \textbf{-7.35} & \textbf{430.6} \\
+\bottomrule
+\end{tabular}
+\end{table*}

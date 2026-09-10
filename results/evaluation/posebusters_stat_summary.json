@@ -1,0 +1,11 @@
+{
+  "total_tested": 200,
+  "pb_valid_rate": 51.0,
+  "bond_lengths_pass": 79.0,
+  "bond_angles_pass": 64.5,
+  "aromatic_flat_pass": 95.0,
+  "sanitization_pass": 100.0,
+  "connectivity_pass": 100.0,
+  "no_clash_pass": 85.0,
+  "time_elapsed_sec": 1446.834257364273
+}
