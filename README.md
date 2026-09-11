@@ -48,7 +48,7 @@ Project_BUILD/
 
 ### 1. Installation
 ```bash
-git clone git@github.com:<your_username>/<your_repo>.git
+git clone git@github.com:harukafreeze/Project_BUILD.git
 cd Project_BUILD
 pip install -e .
 ```
