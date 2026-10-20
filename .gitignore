@@ -1,32 +1,47 @@
-# ==========================================
-# 1. 拦截庞大数据集与模型权重 (绝不上云)
-# ==========================================
-data/
-checkpoints/
+# Dataset/input directories: keep project_build/data source visible.
+/data/
+/checkpoints/
+/outputs/
+/real_world_study/data/
+/real_world_study/results/
+
+# Bulk molecular inputs/outputs and model files.
 *.pt
 *.pth
 *.bin
 *.lmdb
 *.mdb
+*.npz
+*.npy
+*.sdf
+*.pdbqt
+*.pkl
+*.pickle
 
-# ==========================================
-# 2. 拦截临时编译文件、假分子缓存与日志
-# ==========================================
+# Generated files in the exploratory analysis directory (keep source).
+/results/exploratory_allosteric_pose_20261020/*
+!/results/exploratory_allosteric_pose_20261020/run_exploration.py
+
+# Local environments, build products, and caches.
 __pycache__/
 *.py[cod]
-*$py.class
-*.tmp
-*.temp
-*.log
-*.pdbqt
-*.sdf
-
-# ==========================================
-# 3. 拦截虚拟环境与编辑器缓存
-# ==========================================
-build_env/
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+.venv/
 venv/
 env/
+build_env/
 .vscode/
 .idea/
 .DS_Store
+*.log
+*.tmp
+*.temp
+*.zip
+.env
+.env.*
+
+# Private manuscript workspace.
+/paper/

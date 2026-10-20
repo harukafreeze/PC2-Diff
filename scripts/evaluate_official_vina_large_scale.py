@@ -287,6 +287,22 @@ def main():
         "total_elapsed_sec": total_elapsed
     }
 
+    # Persist per-molecule records so that confidence intervals can be computed later.
+    import csv as _csv
+    _csv_path = os.path.join(args.output_dir, "official_vina_dock_per_molecule.csv")
+    with open(_csv_path, "w", newline="", encoding="utf-8") as _f:
+        _w = _csv.writer(_f)
+        _w.writerow(["smiles", "qed", "mw", "logp", "arom_rings", "rotb", "vina_dock", "strain"])
+        for _row in zip(all_smiles, all_qeds, all_mws, all_logps, all_aroms, all_rotbs, all_vina_docks, all_strains):
+            _w.writerow(_row)
+    _clash_path = os.path.join(args.output_dir, "official_vina_dock_clashes_all.csv")
+    with open(_clash_path, "w", newline="", encoding="utf-8") as _f:
+        _w = _csv.writer(_f)
+        _w.writerow(["clashes"])
+        for _c in all_clashes:
+            _w.writerow([_c])
+    print(f">>> Per-molecule records written: {_csv_path}")
+
     json_path = os.path.join(args.output_dir, "official_vina_dock_summary.json")
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(metrics_summary, f, indent=2)

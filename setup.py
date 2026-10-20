@@ -8,10 +8,11 @@ setup(
     python_requires=">=3.10",
     install_requires=[
         "torch>=2.2.0",
-        "numpy<2.0.0",
+        "numpy>=1.23.0,<2.0.0",
         "scipy>=1.10.0",
-        "rdkit",
+        "rdkit>=2022.09.1",
         "pyyaml>=6.0",
         "easydict>=1.10",
+        "lmdb>=1.4.0",
     ],
 )

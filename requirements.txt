@@ -1,25 +1,16 @@
-# =========================================================================
-# Project BUILD 3.0: Core Dependencies for Reproduction
-# =========================================================================
-
-# 1. 核心深度学习与数值计算
-torch>=2.0.0
-numpy>=1.23.0
+# Core constraints are aligned with setup.py. These are not frozen versions.
+torch>=2.2.0
+numpy>=1.23.0,<2.0.0
 scipy>=1.10.0
-
-# 2. 化学信息学与分子拓扑处理
 rdkit>=2022.09.1
+pyyaml>=6.0
+easydict>=1.10
+lmdb>=1.4.0
 
-# 3. 结构生物学对接引擎 (Scripps 官方标准)
+# Docking and evaluation.
 meeko>=0.4.0
 vina>=1.2.3
-
-# 4. 金标物理化学质量评测套件
 posebusters>=0.2.6
 pandas>=1.5.0
 
-# 5. 数据加载、配置与出版级绘图
-lmdb>=1.4.0
-pyyaml>=6.0
-matplotlib>=3.7.0
-tqdm>=4.65.0
+# Optional QM9 loader: install torch-geometric separately if needed.

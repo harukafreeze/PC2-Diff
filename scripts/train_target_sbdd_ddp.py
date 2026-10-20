@@ -158,17 +158,31 @@ def train_one_epoch_ddp(
         "loss_v": loss_v_sum / num_batches
     }
 
+def parse_args():
+    parser = argparse.ArgumentParser(description="Project BUILD 3.0 - 8-GPU DDP SBDD training")
+    parser.add_argument(
+        "--config",
+        type=str,
+        default="configs/models/build_sbdd_full.yaml",
+        help="YAML config path. The default reproduces the original production run.",
+    )
+    return parser.parse_args()
+
+
 def main():
+    args = parse_args()
     local_rank, global_rank, world_size = setup_ddp()
     device = torch.device(f"cuda:{local_rank}")
-    
-    config_path = "configs/models/build_sbdd_full.yaml"
+
+    config_path = args.config
     with open(config_path, "r", encoding="utf-8") as f:
         cfg = yaml.safe_load(f)
         
     if global_rank == 0:
         print("\n" + "=" * 85)
         print(f">>> 🚀 [Project BUILD 3.0] 8 卡 DDP 分布式并行训练系统启动 (World Size = {world_size})")
+        print(f">>> 配置文件: {config_path}")
+        print(f">>> 物理注意力偏置: use_physics_bias = {cfg['model'].get('use_physics_bias', True)}")
         print("=" * 85)
         os.makedirs(cfg["training"]["checkpoint_dir"], exist_ok=True)
         

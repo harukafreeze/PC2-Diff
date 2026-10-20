@@ -1,69 +1,90 @@
-# Project BUILD 3.0: Physics-Grounded & Topology-Conserved Equivariant Diffusion for Structure-Based Drug Design
+# Project BUILD
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![PyTorch 2.1+](https://img.shields.io/badge/PyTorch-2.1+-ee4c2c.svg)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+Physics-guided equivariant diffusion for structure-based molecular generation, with topology reconstruction, docking evaluation, and allosteric-pocket screening workflows.
 
-Official implementation and benchmark suite for **Project BUILD 3.0**, an equivariant generative diffusion architecture for 3D structure-based de novo drug design (SBDD).
+This repository contains the selected research code used in the BUILD manuscript. It includes training, benchmark evaluation, component and training ablations, supplementary analyses, and EGFR/allosteric screening. Docking and structural filters are computational assessments; they do not establish experimental binding or allosteric modulation.
 
----
-
-## 🌟 Key Methodological Highlights
-
-- **PG-CrossAttention**: Embeds a 12-6 Lennard-Jones soft-core potential bias $\mathbf{\Gamma}_{ij}$ directly into equivariant radial cross-attention logits, driving receptor-ligand steric clashes down to **3.75** clashes/molecule on CrossDocked2020 (surpassing the natural co-crystal reference of 5.51).
-- **SVD Cavity Principal Axis Nucleation**: Employs singular value decomposition on receptor cavity covariance tensors to align pharmacophore scaffolds along principal cavity openings, combined with rigid regular-polygon manifold projections (achieving **99.6%** aromatic ring planarity in PoseBusters).
-- **Continuous Quantum Valency Potential**: Introduces a Fermi-like continuous bond probability field coupled with Min-SNR dynamic annealing, boosting 3D covalent bond length pass rates to **94.0%** and bond angles to **86.2%**.
-- **Component Supergraph MST & $sp^2$ Hybridization Conservation**: A discrete graph-theoretic minimum spanning tree engine that guarantees **100.0% single molecular connectivity** without pentavalent carbon errors, elevating de novo drug-likeness to a mean QED of **0.6238** (median **0.65**).
-
----
-
-## 📁 Repository Structure
+## Repository layout
 
 ```text
 Project_BUILD/
-├── configs/models/build_sbdd_full.yaml     # Model & diffusion hyperparameters
-├── project_build/                          # Core Python package
-│   ├── core/registry.py                    # Modular component registry
-│   ├── data/datasets/crossdocked.py        # LMDB multi-worker safe dataset loader
-│   ├── models/backbones/                   # Equivariant backbone & PG-CrossAttention
-│   ├── physics/                            # Quantum valency fields & SNR schedulers
-│   ├── diffusion/                          # VP-SDE engine & Reverse SDE SVD sampler
-│   ├── postprocess/bond_perception.py      # Component Supergraph MST & Kekule engine
-│   └── evaluation/                         # Vina 1.2.7 C++, Kabsch, & Chem metrics
-├── scripts/                                # Official production benchmark scripts
-│   ├── train_target_sbdd_ddp.py            # Distributed 8-GPU training controller
-│   ├── evaluate_official_vina_large_scale.py # Master Table 1 benchmark (1000 molecules)
-│   ├── run_ablation_matrix_v2.py           # Table 2 stepwise causal ablation
-│   ├── benchmark_lit_pcba_evaluation.py    # Table 3 LIT-PCBA zero-shot generalization
-│   ├── test_generalized_nucleation.py      # Table 4 multi-scaffold template test
-│   ├── evaluate_posebusters_full100.py     # Table 5 PoseBusters 17-criterion suite
-│   ├── generate_interaction_heatmaps.py    # Figure 2 & 4 biophysical heatmaps
-│   └── test_sensitivity_*.py               # Tables S1~S4 hyperparameter sensitivity
-└── results/                                # LaTeX tables & JSON benchmark logs
+├── configs/models/          # SBDD model and ablation configurations
+├── project_build/           # Core Python package
+│   ├── core/                # Component registries
+│   ├── data/                # Dataset loaders (source code, not datasets)
+│   ├── models/              # Equivariant backbones and attention
+│   ├── physics/             # Potentials and schedules
+│   ├── diffusion/           # SDE, sampling, and losses
+│   ├── postprocess/         # Bond perception and reconstruction
+│   └── evaluation/          # Chemical and docking metrics
+├── scripts/                 # Training, benchmarks, and ablations
+│   └── supplementary/       # Allosteric screening and supplementary analyses
+├── real_world_study/        # EGFR orthosteric case-study code
+├── results/                 # Selected existing summaries and exploratory code
+├── tests/                   # Existing unit tests
+└── docs/CODE_STRUCTURE.md   # Entry points and input requirements
 ```
 
----
+## Installation
 
-## 🚀 Quick Start
+Python 3.10 or later is required. CUDA training and the distributed launcher require a suitable PyTorch/CUDA environment; the shell launchers target Linux or WSL.
 
-### 1. Installation
 ```bash
-git clone git@github.com:harukafreeze/Project_BUILD.git
+git clone https://github.com/harukafreeze/Project_BUILD.git
 cd Project_BUILD
-pip install -e .
+python -m pip install -e .
+python -m pip install -r requirements.txt
 ```
 
-### 2. Reproducing Benchmark Tables
+The dependency ranges describe the source requirements, not a locked environment. Install the PyTorch build appropriate for your CUDA environment. The optional QM9 loader additionally requires `torch-geometric`; the SBDD entry points use CrossDocked instead. RDKit's contributed SA scorer is used by several analyses.
+
+## Inputs required before running
+
+Datasets, trained weights, molecular caches, and full screening outputs are **not included**. No checkpoint download is provided in this code update.
+
+- CrossDocked LMDB and its split file: default directory `data/crossdocked/crossdocked_lmdb`; configure `dataset.lmdb_dir` in the YAML or checkpoint configuration.
+- Trained SBDD checkpoint: default `checkpoints/sbdd/latest_sbdd_model.pt`.
+- Training-ablation checkpoint: required separately for comparisons against the model trained without physics bias.
+- Target-specific pocket tensors/receptor files: generated by the preparation scripts or supplied in the locations described in [the code guide](docs/CODE_STRUCTURE.md).
+
+Run commands from the repository root. Some older evaluation scripts read paths from the checkpoint configuration or use fixed defaults; check these before a run. Loading checkpoints and serialized datasets requires trusted input files.
+
+## Main entry points
+
 ```bash
-# Master Table 1 (CrossDocked2020 1000 molecules)
+# Distributed training: adjust the GPU count in the launcher for your machine.
+bash scripts/run_8gpu.sh --config configs/models/build_sbdd_full.yaml
+
+# CrossDocked benchmark; requires dataset and checkpoint.
 python scripts/evaluate_official_vina_large_scale.py --checkpoint checkpoints/sbdd/latest_sbdd_model.pt
 
-# Table 2 (Stepwise Causal Ablation)
+# Component ablation.
 python scripts/run_ablation_matrix_v2.py --vina_cpu 8
 
-# Table 3 (LIT-PCBA 15 Clinical Targets)
+# LIT-PCBA pocket preparation and evaluation.
+python scripts/prepare_lit_pcba_dataset.py
 python scripts/benchmark_lit_pcba_evaluation.py --samples_per_target 100
 
-# Table 5 (Full PoseBusters 17-criterion Suite)
+# PoseBusters evaluation using the existing implementation and default checkpoint.
 python scripts/evaluate_posebusters_full100.py
 ```
+
+These are computational workflows and can be expensive. They were not rerun as part of this repository organization. The included summary files are selected existing outputs, not newly generated results. Benchmark scope, postprocessing, aggregation, and exclusions should be interpreted using the manuscript's final protocol; similarly named historical summaries need not describe an identical evaluation setting.
+
+## Allosteric-pocket workflow
+
+The pipeline consists of pocket preparation, sharded generation, shard merging, validity filtering/docking, and a valid-versus-rejected structure comparison.
+
+For a prepared target with `pocket_<target>.pt` and `pocket_<target>.pdbqt` under `real_world_study/data/allosteric_targets/`:
+
+```bash
+GPUS=4 BATCH=512 bash scripts/supplementary/run_target_campaign.sh SHP2_Allosteric 100000
+```
+
+Pocket preparation is performed with `extract_allosteric_pocket.py`; use `--help` for the PDB, ligand, and target-name arguments. EGFR-specific preparation is in `extract_true_allosteric_5d41.py`. Preserve the current directory layout because several scripts import neighboring modules and resolve paths relative to the repository root.
+
+## Additional analyses
+
+See [docs/CODE_STRUCTURE.md](docs/CODE_STRUCTURE.md) for training ablation, sensitivity analyses, novelty, ligand efficiency, contact analysis, and the exploratory Vina seed analysis. Some analyses require intermediate molecular caches not distributed here. The exploratory seed script also requires an external Vina executable.
+
+Manuscript drafts, revision backups, temporary debugging scripts, publication-layout repair tools, full datasets, weights, and bulk generated molecules are excluded from this curated code update.

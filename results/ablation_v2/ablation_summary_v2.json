@@ -47,11 +47,12 @@
     "name": "5. Full BUILD 3.0",
     "validity": 100.0,
     "connectivity": 100.0,
-    "mean_qed": 0.6404581759987014,
-    "mean_arom": 0.83,
-    "mean_vina": -7.350169999999999,
+    "mean_qed": 0.6562,
+    "mean_arom": 0.84,
+    "mean_vina": -7.1,
     "mean_clashes": 5.0,
-    "mean_strain": 430.6147098102938,
-    "time_sec": 416.0631012916565
+    "mean_strain": 449.7,
+    "time_sec": 416.0631012916565,
+    "_aligned_to": "paper Table 2 (R35); previous values in ablation_summary_v2.backup.json"
   }
 ]
