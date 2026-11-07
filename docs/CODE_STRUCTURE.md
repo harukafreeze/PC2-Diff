@@ -1,3 +1,7 @@
+# PC²Diff code guide
+
+Current main-benchmark and 1,000-attempt ablation commands are in [REPRODUCING_MANUSCRIPT.md](REPRODUCING_MANUSCRIPT.md). The entries below include retained earlier evaluation workflows.
+
 # Code guide
 
 This release keeps the original source layout to preserve imports and relative paths. Core algorithms and recorded numerical summaries were copied without modification; the exploratory script's local cache path is configurable in this release.

@@ -45,3 +45,7 @@ build_env/
 
 # Private manuscript workspace.
 /paper/
+
+# Experimental output directories.
+/ablation_isolated_20261102/runs/
+/ablation_isolated_20261102/cache/
