@@ -9,8 +9,8 @@ PC²Diff combines pocket-conditioned equivariant diffusion, physical attention, 
 Use Python 3.10 or later. Install PyTorch for the CUDA version on the training machine, then run:
 
 ~~~bash
-git clone https://github.com/harukafreeze/Project_BUILD.git
-cd Project_BUILD
+git clone https://github.com/harukafreeze/PC2-Diff.git
+cd PC2-Diff
 python -m pip install -e .
 python -m pip install -r requirements.txt
 ~~~
